@@ -26,6 +26,9 @@
 		4B1D81EE24A47ABA0054A72B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D81E424A47ABA0054A72B /* Router.swift */; };
 		4B1D81EF24A47ABA0054A72B /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D81E524A47ABA0054A72B /* NetworkLogger.swift */; };
 		4B1D81F024A47ABA0054A72B /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D81E624A47ABA0054A72B /* EndPointType.swift */; };
+		4B1D81F324A47B3C0054A72B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D81F224A47B3C0054A72B /* HomeViewController.swift */; };
+		4B1D81F624A47BD10054A72B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D81F524A47BD10054A72B /* HomeViewModel.swift */; };
+		4B1D81F924A47CA00054A72B /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D81F824A47CA00054A72B /* CountryDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		4B1D81E424A47ABA0054A72B /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4B1D81E524A47ABA0054A72B /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		4B1D81E624A47ABA0054A72B /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		4B1D81F224A47B3C0054A72B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4B1D81F524A47BD10054A72B /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4B1D81F824A47CA00054A72B /* CountryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				4B1D81D824A47ABA0054A72B /* Networks */,
+				4B1D81F124A47B3C0054A72B /* ViewController */,
+				4B1D81F424A47BD10054A72B /* ViewModels */,
+				4B1D81F724A47CA00054A72B /* Models */,
 				4B1D81A524A479810054A72B /* AppDelegate.swift */,
 				4B1D81A724A479810054A72B /* SceneDelegate.swift */,
 				4B1D81A924A479810054A72B /* ViewController.swift */,
@@ -199,6 +208,30 @@
 				4B1D81E624A47ABA0054A72B /* EndPointType.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		4B1D81F124A47B3C0054A72B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B1D81F224A47B3C0054A72B /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4B1D81F424A47BD10054A72B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4B1D81F524A47BD10054A72B /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4B1D81F724A47CA00054A72B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B1D81F824A47CA00054A72B /* CountryDetail.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,13 +368,16 @@
 				4B1D81B024A479820054A72B /* SampleTask.xcdatamodeld in Sources */,
 				4B1D81EB24A47ABA0054A72B /* ServiceEndPoint.swift in Sources */,
 				4B1D81AA24A479810054A72B /* ViewController.swift in Sources */,
+				4B1D81F624A47BD10054A72B /* HomeViewModel.swift in Sources */,
 				4B1D81ED24A47ABA0054A72B /* HTTPMethod.swift in Sources */,
 				4B1D81EE24A47ABA0054A72B /* Router.swift in Sources */,
+				4B1D81F324A47B3C0054A72B /* HomeViewController.swift in Sources */,
 				4B1D81EF24A47ABA0054A72B /* NetworkLogger.swift in Sources */,
 				4B1D81F024A47ABA0054A72B /* EndPointType.swift in Sources */,
 				4B1D81E724A47ABA0054A72B /* ParameterEncoding.swift in Sources */,
 				4B1D81A624A479810054A72B /* AppDelegate.swift in Sources */,
 				4B1D81EA24A47ABA0054A72B /* NetworkManager.swift in Sources */,
+				4B1D81F924A47CA00054A72B /* CountryDetail.swift in Sources */,
 				4B1D81EC24A47ABA0054A72B /* HTTPTask.swift in Sources */,
 				4B1D81E824A47ABA0054A72B /* URLParameterEncoding.swift in Sources */,
 				4B1D81E924A47ABA0054A72B /* JSONParameterEncoder.swift in Sources */,
