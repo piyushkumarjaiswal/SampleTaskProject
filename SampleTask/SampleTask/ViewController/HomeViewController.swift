@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
   /// Loading Flag
   private var shouldAnimatedLoading = true
   /// loading indicator button instance
-  private let buttonLoading = SpinnerButton()
+  private let progressIndicator = SpinnerButton()
   // MARK: View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -47,14 +47,14 @@ class HomeViewController: UIViewController {
     tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.homeCell)
     tableView.refreshControl?.tintColor = ApplicationColor.borderColor
     navigationItem.title = Message.sampleTask.value
-    view.addSubview(buttonLoading)
-    buttonLoading.frame = CGRect(x: Dimensions.loaderXPosition ,
+    view.addSubview(progressIndicator)
+    progressIndicator.frame = CGRect(x: Dimensions.loaderXPosition ,
                                  y: Dimensions.loaderYPosition ,
                                  width: Dimensions.loaderWidth,
                                  height: Dimensions.loadderHeight)
-    buttonLoading.center = view.center
-    buttonLoading.animate(animation: .collapse)
-    view.bringSubviewToFront(buttonLoading)
+    progressIndicator.center = view.center
+    progressIndicator.animate(animation: .collapse)
+    view.bringSubviewToFront(progressIndicator)
     prepareViewModel()
   }
   /**
@@ -66,7 +66,7 @@ class HomeViewController: UIViewController {
       guard let getSelf = self else { return }
       DispatchQueue.main.async {
         if error != nil {
-          getSelf.showAlert(message: error)
+          getSelf.showAlert(message: error, delay: 0.3)
         } else if error == nil, detail != nil {
           getSelf.navigationItem.title = detail?.title ?? Message.sampleTask.value
           getSelf.tableView.reloadData()
@@ -84,8 +84,8 @@ class HomeViewController: UIViewController {
       - status: Boolean for show and hide the loading view
    */
   private func showLoader(status: Bool) {
-    buttonLoading.isHidden = !status
-    buttonLoading.animate(animation: (status == true) ? .collapse : .expand)
+    progressIndicator.isHidden = !status
+    progressIndicator.animate(animation: (status == true) ? .collapse : .expand)
   }
   // MARK: ACTIONS
   /// Fetch the country list form the API call

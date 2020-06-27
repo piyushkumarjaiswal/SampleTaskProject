@@ -81,10 +81,12 @@ extension UIViewController {
       - message: Message inside alert
       - title: Title in header of alert
    */
-  func showAlert(message: String?, title: String = Message.header.value) {
-    let alertController = UIAlertController(title: title, message: message ?? "", preferredStyle: .alert)
-    let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-    alertController.addAction(OKAction)
-    self.present(alertController, animated: true, completion: nil)
+  func showAlert(message: String?, title: String = Message.header.value, delay: Double = 0.0) {
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay) {
+      let alertController = UIAlertController(title: title, message: message ?? "", preferredStyle: .alert)
+      let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+      alertController.addAction(OKAction)
+      self.present(alertController, animated: true, completion: nil)
+    }
   }
 }
